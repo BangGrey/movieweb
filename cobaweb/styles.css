@@ -1,0 +1,158 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('../cobaweb/picture/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#moving-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    animation: moveLeftToRight 15s linear infinite;
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Foto Profil Kiri */
+.profile-image-left {
+    position: absolute;
+    top: 5%; /* Memastikan berada di atas */
+    left: 5%; /* Menempatkan foto di kiri atas */
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Foto Profil Kanan */
+.profile-image-right {
+    position: absolute;
+    top: 5%; /* Memastikan berada di atas */
+    right: 5%; /* Menempatkan foto di kanan atas */
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-box {
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #2575fc;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #6a11cb;
+}
+
+.register-btn-container {
+    margin-top: 20px;
+}
+
+.guest-btn-container {
+    margin-bottom: 15px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #6a11cb;
+}
+
+.background img {
+    display: none; /* Hiding the unused background image */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}

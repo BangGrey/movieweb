@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('../cobaweb/picture/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #moving-header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 28px;
+            color: #fff;
+            animation: moveLeftToRight 15s linear infinite;
+        }
+
+        @keyframes moveLeftToRight {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(50%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        #header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .login-box {
+            text-align: center;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background: #2575fc;
+            color: #fff;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #6a11cb;
+        }
+
+        .register-btn-container {
+            margin-top: 20px;
+        }
+
+        .guest-btn-container {
+            margin-bottom: 15px;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid #6a11cb;
+        }
+
+        .background img {
+            display: none; /* Hiding the unused background image */
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="moving-header">Welcome to Website Movie Library</div>
+
+    <!-- Foto Profil Kiri -->
+    <img class="profile-image-left" src="../cobaweb/picture/profile.jpg" alt="Profile Image Left">
+
+    <!-- Foto Profil Kanan -->
+    <img class="profile-image-right" src="../cobaweb/picture/profile2.jpg" alt="Profile Image Right">
+
+    <div class="container">
+        <div class="login-box">
+            <div class="login-form">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" id="login-btn">Login</button>
+                    <div class="guest-btn-container">
+                        <button type="button" id="guest-btn">Login as Guest</button>
+                    </div>
+                    <div class="register-btn-container">
+                        <button type="button" id="register-btn">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hanya menampilkan bagian copyright -->
+    <div class="footer">
+        <p>Copyright © 2024 Movie Library Semua hak dilindungi.</p>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
